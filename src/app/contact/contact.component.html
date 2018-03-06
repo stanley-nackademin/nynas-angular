@@ -1,0 +1,57 @@
+<div class="container bg-light pb-1">
+  <div class="row d-flex justify-content-md-between">
+
+
+    <div class="col-12 col-md-9">
+      <article class="bg-white px-3 mt-4 mb-2 pb-2 border">
+        <h2>Lämna dina synpunkter här!</h2>
+        <div class="">
+          <form action="#">
+            <div class="form-group row">
+              <label for="title" class="col-md-2 col-form-label">Rubrik</label>
+              <div class="col-md-7">
+                <input class="form-control" id="title" type="text" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="message" class="col-md-2">Beskrivning</label>
+              <div class="col-md-7">
+                <textarea class="form-control" id="message" aria-describedby="messageHelp" rows="3" required></textarea>
+                <small class="form-text text-muted" id="messageHelp">Max 100 tecken</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-2" for="formControlSelect">Ärende</label>
+              <div class="col-md-3">
+                <select class="form-control" id="formControlSelect" required>
+                  <option value="" selected>Välj...</option>
+                  <option value="strand">Strand</option>
+                  <option value="bad">Bad</option>
+                  <option value="kanot">Kanot</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-12 row">Vill du få svar på din synpunkt?</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" name="feedback-radio" id="radio-yes" value="true" type="radio" required>
+                <label class="form-check-label" for="radio-yes">Ja</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" name="feedback-radio" id="radio-no" value="false" type="radio" checked required>
+                <label class="form-check-label" for="radio-no">Nej</label>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="email" class="col-md-2 col-form-label">Email</label>
+              <div class="col-md-7">
+                <input class="form-control" id="email" type="email">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Skicka</button>
+          </form>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>

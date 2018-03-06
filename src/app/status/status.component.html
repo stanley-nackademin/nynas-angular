@@ -1,0 +1,80 @@
+<div class="container bg-light pb-1">
+  <div class="row d-flex justify-content-md-between">
+
+    <div class="col-12 col-md-4 order-md-last">
+      <article class="bg-white px-3 mt-4 mb-2 pb-2 border">
+        <h2>Vädret på Nicksta</h2>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <caption class="d-none">Vädret på Nicksta</caption>
+            <thead class="table-head">
+              <tr>
+                <th scope="col">Klocka</th>
+                <th scope="col">Väder</th>
+                <th scope="col">Värme</th>
+                <th scope="col">Vind</th>
+              </tr>
+            </thead>
+            <tbody class="weather-data">
+              <tr *ngFor="let weatherStamp of weatherData">
+                <td>
+                  {{weatherStamp.time}}
+                </td>
+                <td>
+                  {{weatherStamp.description}}
+                </td>
+                <td>
+                  {{weatherStamp.temperature}}&deg;C
+                </td>
+                <td>
+                  {{weatherStamp.wind}}m/s
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+
+
+    <div class="col-12 col-md-8 order-md-first">
+      <article class="bg-white px-3 pb-1 mt-4 mb-2 border">
+        <h2>Åker tågen?</h2>
+        <div class="forms">
+          <form action="#">
+            <div class="form-group">
+              <label>Jag åker ifrån..</label>
+              <div>
+                <input class="form-control depart-from-input" type="text">
+              </div>
+            </div>
+            <button class="btn btn-color search-btn" type="submit">Sök</button>
+          </form>
+        </div>
+        <div class="table-responsive mt-2">
+          <table class="table table-striped">
+            <caption class="traffic-status"></caption>
+            <thead class="table-head">
+              <tr>
+                <th>Nr</th>
+                <th>Avgår</th>
+                <th>Ankommer</th>
+              </tr>
+            </thead>
+            <tbody class="train-data">
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="" colspan="3"></td>
+              </tr>
+            </tfoot>
+          </table>
+          <p class="text-muted">Åker från:
+            <span class="depart-from"></span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
